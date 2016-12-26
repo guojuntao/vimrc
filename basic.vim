@@ -36,7 +36,7 @@ colorscheme molokai " 设置配色方案
 " let g:molokai_original = 1
 
 set listchars=tab:>-,trail:$    " 设置制表符以及行末空格的显示，set list 生效
-# set list
+" set list
 
 set wildmenu                " 在命令行的上方显示可能的匹配
 set wildmode=longest:full   " 提供类似 shell 的补全方式
