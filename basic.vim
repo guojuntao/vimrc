@@ -1,9 +1,8 @@
 " Author : guojuntao
-" Date   : 2016/05/14
+" Date   : 2016/12/27
 
-" TODO:
-" 1 在 .vimrc 中，额外加载此配置文件。.vim 目录的文件也通过添加目录加载
-" 2 添加 cscope 快捷键
+" TODO
+" 添加中文 vim help 文档
 
 " 文件编码设置
 set encoding=utf-8
