@@ -29,8 +29,10 @@ set laststatus=2    " 总是打开状态栏
 
 set display=lastline    " 尽可能多地显示最后一行的内容，而不是用 @ 代替
 
-set t_Co=256        " 支持 256 色
-colorscheme molokai " 设置配色方案
+set t_Co=256                " 支持 256 色
+colorscheme molokai         " 设置配色方案
+let g:molokai_original = 1
+let g:rehash256 = 1
 
 set listchars=tab:>-,trail:$    " 设置制表符以及行末空格的显示，set list 生效
 " set list
