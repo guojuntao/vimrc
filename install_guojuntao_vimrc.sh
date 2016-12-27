@@ -6,6 +6,7 @@ source ~/.vim_guojuntao/vimrc.vim
 ' > ~/.vimrc
 
 # install vundle
+# TODO: use subtree instead submodule
 git submodule update --init
 
 # install vundle plugin

@@ -9,10 +9,12 @@ call vundle#begin('~/.vim_guojuntao/bundle')
 Plugin 'VundleVim/Vundle.vim'
 
 " taglist 插件做了修改,直接放在 github repo 里,不直接从互联网下载
-" a.vim 插件直接放到 github repo
-" molokai 配色直接放到 github repo
 
+" 配色插件
+Plugin 'tomasr/molokai'
 Plugin 'altercation/vim-colors-solarized'
+
+Plugin 'vim-scripts/a.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'fatih/vim-go'
 

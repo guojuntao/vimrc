@@ -31,8 +31,6 @@ set display=lastline    " 尽可能多地显示最后一行的内容，而不是
 
 set t_Co=256        " 支持 256 色
 colorscheme molokai " 设置配色方案
-" set background=light
-" let g:molokai_original = 1
 
 set listchars=tab:>-,trail:$    " 设置制表符以及行末空格的显示，set list 生效
 " set list
