@@ -3,12 +3,11 @@
 
 " TODO
 " 添加中文 vim help 文档
-" tab 上编号
-" 文件退出后可以回退
 " 命令行可以粘贴
 " vim-go 的功能
 " 自动补全
 " 写函数下面提示参数
+" 不用 set paste 直接粘贴
 
 " 文件编码设置
 set encoding=utf-8
@@ -77,3 +76,13 @@ au BufRead * if line("'\"") > 0 && line("'\"") <= line("$")
 
 " 寻找 tags 文件顺序，先文件目录，再当前目录
 set tags=./tags,tags
+
+set nobackup    " 不产生类似 basic.vim~ 的备份文件
+set noswapfile  " 不产生类似 .basic.vim.swp 的交换文件
+
+" 退出 vim 后，仍然可以执行 undo 操作
+try
+    set undodir=~/.vim_guojuntao/temp_dirs/undodir
+    set undofile
+catch
+endtry
