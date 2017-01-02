@@ -34,16 +34,21 @@ set laststatus=2    " 总是打开状态栏
 
 set display=lastline    " 尽可能多地显示最后一行的内容，而不是用 @ 代替
 
+" 设置配色方案
 set t_Co=256                " 支持 256 色
 let g:molokai_original = 1
 let g:rehash256 = 1
-colorscheme molokai         " 设置配色方案
+colorscheme molokai
+" let g:solarized_termcolors=256
+" colorscheme solarized
 
 set listchars=tab:>-,trail:$    " 设置制表符以及行末空格的显示，set list 生效
 " set list
 
 set wildmenu                " 在命令行的上方显示可能的匹配
 set wildmode=longest:full   " 提供类似 shell 的补全方式
+" set wildmode=full
+" CTRL-D 可以 list 待补全选项
 
 set incsearch       " 输入搜索命令时，显示目前输入的模式的匹配位置(预搜索)
 set hlsearch        " 高亮搜索结果
@@ -86,3 +91,7 @@ try
     set undofile
 catch
 endtry
+
+set autoread
+set autowrite
+

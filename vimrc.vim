@@ -15,8 +15,12 @@ Plugin 'tomasr/molokai'
 Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'vim-scripts/a.vim'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic' " 严重影响 vim 流畅，先关闭
 Plugin 'fatih/vim-go'
+Plugin 'mkitt/tabline.vim'
+" Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-scripts/mru.vim'
+Plugin 'scrooloose/nerdtree'
 
 " 你的所有插件需要在下面这行之前
 call vundle#end()            " 必须
