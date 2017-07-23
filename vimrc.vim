@@ -21,6 +21,7 @@ Plugin 'mkitt/tabline.vim'
 " Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
 
 " 你的所有插件需要在下面这行之前
 call vundle#end()            " 必须
