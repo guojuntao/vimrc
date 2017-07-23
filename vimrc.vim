@@ -8,16 +8,13 @@ call vundle#begin('~/.vim_guojuntao/bundle')
 " 让vundle管理插件版本,必须
 Plugin 'VundleVim/Vundle.vim'
 
-" taglist 插件做了修改,直接放在 github repo 里,不直接从互联网下载
-
 " 配色插件
 Plugin 'tomasr/molokai'
 Plugin 'altercation/vim-colors-solarized'
 
-Plugin 'vim-scripts/a.vim'
-" Plugin 'scrooloose/syntastic' " 严重影响 vim 流畅，先关闭
+Plugin 'vim-scripts/a.vim' " 用于 .c .h 文件相互跳转
 Plugin 'fatih/vim-go'
-Plugin 'mkitt/tabline.vim'
+Plugin 'mkitt/tabline.vim' " 用于显示 tab 页编号
 " Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'scrooloose/nerdtree'

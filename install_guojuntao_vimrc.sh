@@ -5,7 +5,7 @@ echo 'set runtimepath+=~/.vim_guojuntao
 source ~/.vim_guojuntao/vimrc.vim
 ' > ~/.vimrc
 
-# 在 golang 中使用 taglist
+# 在 golang 中使用 ctags 
 echo '--langdef=Go
 --langmap=Go:.go
 --regex-Go=/func([ \t]+\([^)]+\))?[ \t]+([a-zA-Z0-9_]+)/\2/f,func/
