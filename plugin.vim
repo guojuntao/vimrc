@@ -1,5 +1,6 @@
 " tagbar autoopen
 autocmd FileType * nested :call tagbar#autoopen(0)
+nmap <F8> :TagbarToggle<CR>
 
 " cscope 设置
 if filereadable("cscope.out")

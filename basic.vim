@@ -33,6 +33,7 @@ set showcmd         " 显示正在输入的命令
 set laststatus=2    " 总是打开状态栏
 
 set display=lastline    " 尽可能多地显示最后一行的内容，而不是用 @ 代替
+set clipboard=unnamed   " 默认黏贴寄存器为系统寄存器 "*y
 
 " 设置配色方案
 set t_Co=256                " 支持 256 色
