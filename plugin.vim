@@ -8,6 +8,7 @@ if filereadable("cscope.out")
 endif
 " leader 按键详情可以通过 help leader 查看,默认是\
 map <Leader>c :cs find c 
+map <Leader>r :GoRef
 
 " syntastic 插件设置
 let g:syntastic_auto_loc_list = 1
