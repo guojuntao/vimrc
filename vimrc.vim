@@ -13,7 +13,9 @@ Plugin 'tomasr/molokai'
 Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'vim-scripts/a.vim' " 用于 .c .h 文件相互跳转
-Plugin 'fatih/vim-go'
+Plugin 'fatih/vim-go' " 用于 golang
+Plugin 'davidhalter/jedi-vim' " 用于 python
+
 Plugin 'mkitt/tabline.vim' " 用于显示 tab 页编号
 " Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-scripts/mru.vim'
