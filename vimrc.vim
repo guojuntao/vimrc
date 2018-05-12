@@ -20,7 +20,10 @@ Plugin 'mkitt/tabline.vim' " 用于显示 tab 页编号
 " Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'majutsushi/tagbar'
+Plugin 'racer-rust/vim-racer'
+Plugin 'rust-lang/rust.vim'
 
 " 你的所有插件需要在下面这行之前
 call vundle#end()            " 必须
