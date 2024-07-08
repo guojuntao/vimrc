@@ -1,25 +1,32 @@
-" tagbar autoopen
-autocmd FileType * nested :call tagbar#autoopen(0)
-nmap <F8> :TagbarToggle<CR>
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
-" cscope 设置
-if filereadable("cscope.out")
-    cs add cscope.out
-endif
-" leader 按键详情可以通过 help leader 查看,默认是\
-map <Leader>c :cs find c 
-map <Leader>r :GoRef
-map  :GoRef
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
 
-" syntastic 插件设置
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_go_checkers = ['go']
+" Remap for format selected region
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+nmap <silent>fm <Plug>(coc-format) 
 
-let g:jedi#goto_definitions_command = "<C-]>"
-let g:jedi#usages_command = "<C-[>"
 
 " MRU 快捷键设置
 map <leader>f :MRU<CR>
 map <leader>m :MRU
 " t 表示在新窗口打开
+
+" tagbar
+autocmd FileType * nested :call tagbar#autoopen(0)
+" autocmd VimEnter * nested :call tagbar#autoopen(0)
+" autocmd TabEnter * nested :call tagbar#autoopen(0)
+" autocmd VimEnter * TagbarToggle
+" autocmd TabEnter * TagbarToggle
+nmap <F8> :TagbarToggle<CR>
+
+let g:tagbar_width = 28
+
+" NERDTree
+au VimEnter * NERDTree

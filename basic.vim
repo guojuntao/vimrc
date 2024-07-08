@@ -1,14 +1,6 @@
 " Author : guojuntao
 " Date   : 2016/12/27
 
-" TODO
-" 添加中文 vim help 文档
-" 命令行可以粘贴
-" vim-go 的功能
-" 自动补全
-" 写函数下面提示参数
-" 不用 set paste 直接粘贴
-
 " 文件编码设置
 set encoding=utf-8
 set fileencoding=utf-8
@@ -33,7 +25,8 @@ set showcmd         " 显示正在输入的命令
 set laststatus=2    " 总是打开状态栏
 
 set display=lastline    " 尽可能多地显示最后一行的内容，而不是用 @ 代替
-set clipboard=unnamed   " 默认黏贴寄存器为系统寄存器 "*y
+"set clipboard=unnamed   " 默认黏贴寄存器为系统寄存器 "*y
+set clipboard=unnamedplus,unnamed
 
 " 设置配色方案
 set t_Co=256                " 支持 256 色
@@ -70,9 +63,9 @@ set statusline=%f%m%r\ %=[%{&fileformat}]
                \\ [%Y]\ [0x%B]\ [%l,%c%V][%p%%]
 
 " 定义全局搜索快捷键
-au BufEnter *.go   map <F5> :vim /\<\>/gj **/*.go<Enter> :cl<Enter>
-au BufEnter *.lua  map <F5> :vim /\<\>/gj **/*.lua<Enter> :cl<Enter>
-au BufEnter *.[ch] map <F5> :vim /\<\>/gj **/*.[ch]<Enter> :cl<Enter>
+au BufEnter *.go   map <F5> :vim /\<\>/gj **/*.go<Enter> :cl<Enter>
+au BufEnter *.lua  map <F5> :vim /\<\>/gj **/*.lua<Enter> :cl<Enter>
+au BufEnter *.[ch] map <F5> :vim /\<\>/gj **/*.[ch]<Enter> :cl<Enter>
 map <F6> :cp<Enter>
 map <F7> :cn<Enter>
 
@@ -96,3 +89,45 @@ endtry
 set autoread
 set autowrite
 
+"------------------------------------------------------------------------------
+" 从WXG开发机添加 202106
+
+" set the select color of vim 
+hi IncSearch term=standout ctermfg=0 ctermbg=3
+hi CursorColumn term=standout ctermfg=0 ctermbg=3
+hi StatusLine term=standout ctermfg=0 ctermbg=3
+set number
+set nocompatible
+set backspace=indent,eol,start
+set hidden
+set cmdheight=2
+set updatetime=300
+
+set laststatus=2
+autocmd FileType json syntax match Comment +\/\/.\+$+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json,cc,c++ setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
