@@ -1,15 +1,13 @@
 cd ~/.vim_guojuntao
 
-echo 'set runtimepath+=~/.vim_guojuntao
-
-source ~/.vim_guojuntao/vimrc.vim
+echo 'source ~/.vim_guojuntao/vimrc.vim
 ' > ~/.vimrc
 
-# install vundle
-# TODO: use subtree instead submodule
-git submodule update --init
+# install plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# install vundle plugin
-vim +PluginInstall +qall
+# install plugin
+vim +PlugInstall +qall
 
 echo "Installed the GuoJuntao Vim configuration successfully! Enjoy :-)"
