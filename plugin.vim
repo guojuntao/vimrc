@@ -12,21 +12,19 @@ xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 nmap <silent>fm <Plug>(coc-format) 
 
-
 " MRU 快捷键设置
 map <leader>f :MRU<CR>
 map <leader>m :MRU
 " t 表示在新窗口打开
 
 " tagbar
-autocmd FileType * nested :call tagbar#autoopen(0)
+" autocmd FileType * nested :call tagbar#autoopen(0)
 " autocmd VimEnter * nested :call tagbar#autoopen(0)
 " autocmd TabEnter * nested :call tagbar#autoopen(0)
 " autocmd VimEnter * TagbarToggle
 " autocmd TabEnter * TagbarToggle
-nmap <F8> :TagbarToggle<CR>
-
-let g:tagbar_width = 28
+" nmap <F8> :TagbarToggle<CR>
+" let g:tagbar_width = 28
 
 " NERDTree
 au VimEnter * NERDTree

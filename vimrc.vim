@@ -13,9 +13,10 @@ Plug 'mkitt/tabline.vim', " 用于显示 tab 页编号
 Plug 'vim-scripts/mru.vim',
 Plug 'scrooloose/nerdtree',
 Plug 'Xuyuanp/nerdtree-git-plugin',
-Plug 'majutsushi/tagbar',
+" Plug 'majutsushi/tagbar',
 Plug 'racer-rust/vim-racer',
 Plug 'rust-lang/rust.vim',
+Plug 'liuchengxu/vista.vim',
 
 call plug#end()
 
