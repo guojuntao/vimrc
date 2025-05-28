@@ -86,6 +86,8 @@ try
 catch
 endtry
 
+set mouse=a " 触摸板可以上下滚动
+
 set autoread
 set autowrite
 
